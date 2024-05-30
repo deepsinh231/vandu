@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { ChannelList } from 'stream-chat-expo'
+import { router } from 'expo-router'
 
 const MainlayoutScreenIndex = () => {
   return (
-    <View>
-      <Text>MainlayoutScreenIndex</Text>
-    </View>
+    <ChannelList onSelect={(channel) => router.push(`/channel/${channel.cid}`)} >
+    </ChannelList>
   )
 }
 
